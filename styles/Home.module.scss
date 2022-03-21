@@ -1,0 +1,211 @@
+$default-font-color: #fff;
+$bg: #fff;
+$banner: #000;
+$primary: #4f64ff;
+
+@function setTextColor($background) {
+	$font-color: $default-font-color;
+
+	@if lightness($background) > 50% {
+		$font-color: invert($default-font-color);
+	}
+
+	@return $font-color;
+}
+
+.content {
+	border-top: 0.5px solid #0e0e0e;
+	background-color: $bg;
+}
+.container {
+	padding: 0 10%;
+}
+
+.main {
+	font-size: 1.25rem;
+}
+
+@keyframes lilitaw {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.banner {
+	background-color: $banner;
+	height: 100vh;
+	padding: 0 5%;
+	display: flex;
+	align-items: center;
+
+	.name {
+		font-size: 35px;
+		animation: lilitaw 3s;
+		color: setTextColor($banner);
+	}
+
+	.skills {
+		animation: lilitaw 3s;
+		color: $primary;
+		font-size: 40px;
+		line-height: 1.2;
+		font-weight: 1000;
+		letter-spacing: -0em;
+		text-transform: none;
+		margin: 0;
+	}
+}
+
+.contentTitle {
+	text-align: center;
+	color: $primary;
+	letter-spacing: 0;
+	font-weight: 600;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.contentBody {
+	color: setTextColor($bg);
+	letter-spacing: 1px;
+	text-transform: none;
+}
+
+.about {
+	animation: lilitaw 3s;
+	padding: 60px 0;
+	letter-spacing: 1px;
+	text-transform: none;
+	color: setTextColor($bg);
+	position: relative;
+	text-align: justify;
+}
+
+.Services {
+	padding: 60px 0;
+	color: setTextColor($bg);
+	border-top: 1px solid #cccccc7a;
+	background-color: #cccccc7a;
+
+	.serviceItem {
+		padding: 0 20px;
+
+		.img {
+			align-self: center;
+			object-fit: contain;
+			width: 120px;
+			height: 120px;
+		}
+
+		.serviceDetails {
+			.title {
+				text-align: center;
+				font-weight: 600;
+				font-size: 20px;
+				margin: 10px 0;
+				color: #8c3ff9;
+			}
+			.details {
+				text-align: center;
+				color: setTextColor(#cccccc7a);
+			}
+		}
+	}
+}
+.dflex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Tools {
+	padding: 60px 0;
+	color: setTextColor($bg);
+	border-top: 1px solid #cccccc7a;
+	background-color: $bg;
+
+	.toolItem {
+		margin: 0 20px;
+		padding: 10px 20px;
+		.img {
+			align-self: center;
+			object-fit: contain;
+			width: 100px;
+			height: 120px;
+			margin: 0 5px;
+		}
+	}
+}
+
+.GetInTouch {
+	padding: 50px 100px 100px;
+	color: setTextColor($banner);
+	border-top: 1px solid #cccccc7a;
+	background-color: $banner;
+
+	h1 {
+		text-align: center;
+		color: setTextColor($banner);
+
+		font-weight: 1000;
+		font-size: 44px;
+	}
+	.titleDesc {
+		color: #c1c1c1;
+		font-size: 18px;
+		letter-spacing: 1px;
+		margin-top: -30px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.Input {
+		background-color: black;
+		color: #fff;
+		font-weight: 600;
+		font-size: 16px;
+	}
+	textarea {
+		height: 200px !important;
+	}
+	button {
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		// border: 1px solid #fff;
+		padding: 0;
+		background-color: #186aff;
+	}
+}
+.contact {
+	padding: 0 0 20px;
+
+	.cardItem {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		padding: 10px;
+
+		div {
+			padding: 0 10px;
+			color: #c1c1c1;
+			a {
+				color: #c1c1c1;
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	h1 {
+		text-align: left;
+		margin-bottom: 0;
+	}
+}

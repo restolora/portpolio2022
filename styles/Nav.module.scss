@@ -1,0 +1,28 @@
+.nav {
+	height: 70px;
+	background: #000 !important;
+	color: #fff !important;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 10px 10px 0;
+	z-index: 1000;
+}
+
+.nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.nav ul li a {
+	margin: 5px 15px;
+	color: #fff;
+
+	&:hover {
+		color: #4f64ff;
+	}
+}
