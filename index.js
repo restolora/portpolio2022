@@ -8,7 +8,7 @@ const mongoAdapter = require('socket.io-adapter-mongo');
 const { mongoConnectionString } = require('./config');
 const mongoose = require('mongoose');
 const app = express();
-
+const path = require('path');
 // var server = http.createServer(app);
 // const io = socketIO(server);
 // io.adapter(mongoAdapter(`${mongoConnectionString.cluster}`));
@@ -38,4 +38,11 @@ mongoose.connect(
 );
 // api
 const port = process.env.PORT || 3001;
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client'));
+	app.get('*', (req, res) => {
+		req.sendFile(path.resolve(__dirname, 'client', 'pages/_app.js'));
+	});
+}
+
 app.listen(port, () => console.log('Express server is running at port', port));
