@@ -41,7 +41,7 @@ const port = process.env.PORT || 3001;
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client'));
 	app.get('*', (req, res) => {
-		req.sendFile(path.resolve(__dirname, 'client', 'pages/_app.js'));
+		req.sendFile(path.resolve(__dirname, 'client', 'out/index.html'));
 	});
 }
 
