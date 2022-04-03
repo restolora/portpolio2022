@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import styles from '../styles/Home.module.scss'
 import { database } from 'sdk'
 import { message } from 'antd'
 
 const Test = ({ token }) => {
-  console.log(token)
   const [data, setData] = useState(null)
   const Create = async () => {
     const dt = { Description: 'asdasd' }
