@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
 import About from '../components/About'
@@ -10,9 +9,6 @@ import GetInTouch from '../components/GetInTouch'
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>qweqwe</title>
-      </Head>
       <div className={styles.banner} id={'Home'}>
         <div className={styles.intro}>
           <h1 className={styles.name}>Hi, I'm Rey</h1>
