@@ -1,4 +1,4 @@
-exports.environment = process.env.NODE_ENV;
+exports.environment = process.env.CUSTOM_ENV;
 
 exports.apiUrl = {
 	// development: 'http://localhost:8080/',
